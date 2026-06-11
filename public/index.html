@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieFinder</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo">🎬 MovieFinder</div>
+      </nav>
+
+      <div class="hero-content">
+        <h1>Find Your Next Favorite Movie</h1>
+        <p>Search millions of titles instantly</p>
+
+        <div class="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search movies, series..."
+            autocomplete="off"
+          />
+          <button id="searchBtn">Search</button>
+        </div>
+
+        <!-- FILTERS -->
+        <div class="filters">
+          <label for="typeFilter">Type:</label>
+          <select id="typeFilter" title="Filter by type">
+            <option value="">All Types</option>
+            <option value="movie">Movies</option>
+            <option value="series">Series</option>
+            <option value="episode">Episodes</option>
+          </select>
+
+          <label for="yearFilter">Year:</label>
+          <select id="yearFilter" title="Filter by year">
+            <option value="">All Years</option>
+          </select>
+
+          <label for="sortFilter">Sort:</label>
+          <select id="sortFilter" title="Sort results">
+            <option value="">Default</option>
+            <option value="az">A → Z</option>
+            <option value="za">Z → A</option>
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <!-- RESULTS SECTION -->
+    <main class="main">
+      <div id="resultsHeading" class="results-heading hidden"></div>
+      <div id="resultsGrid" class="results-grid"></div>
+      <div id="noResults" class="no-results hidden">
+        <p>😕 No results found. Try a different search.</p>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>🎬 MovieFinder &mdash; Powered by <a href="https://www.omdbapi.com" target="_blank" rel="noopener">OMDb API</a></p>
+      <p class="footer-sub">Built as a JavaScript final project &copy; 2026</p>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>
